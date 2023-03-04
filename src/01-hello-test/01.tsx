@@ -9,7 +9,7 @@ export function splitIntowords(sentense: string) {
 
 
 
-export const value = "01_01";
-
-export class value01_01 {
-}
+// export const value = "01_01";
+//
+// export class value01_01 {
+// }
