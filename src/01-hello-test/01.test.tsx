@@ -1,20 +1,29 @@
 import {mult, splitIntoWords, sum} from "./01";
 
-test('sum should be correct', () => {
-    const a = 1;
-    const b = 2;
-    const c = 3;
+// const a = 1;
+// const b = 2;
+// const c = 3;
 
+let a: number;
+let b: number;
+let c: number;
+
+beforeEach( () => {
+    a = 1;
+    b = 2;
+    c = 3;
+})
+
+test('sum should be correct', () => {
     const result1 = sum(a, b);
+    a = 100;
     const result2 = sum(a, b);
 
     expect(result1).tobe(3);
-    expect(result2).tobe(5);
+    // expect(result2).tobe(5);
+    expect(result2).tobe(102);
 })
 test('multiply should be correct', () => {
-    const a = 1;
-    const b = 2;
-    const c = 3;
 
     const result1 = mult(a, b);
     const result2 = mult(a, b);
@@ -34,12 +43,12 @@ test("splitting into words should be correct", () => {
     expect(result1[1]).tobe("my");
     expect(result1[2]).tobe("friend");
 
-    expect(result1.length).tobe(5);
-    expect(result1[0]).tobe("js");
-    expect(result1[1]).tobe("the");
-    expect(result1[2]).tobe("best");
-    expect(result1[3]).tobe("programming");
-    expect(result1[4]).tobe("language");
+    expect(result2.length).tobe(5);
+    expect(result2[0]).tobe("js");
+    expect(result2[1]).tobe("the");
+    expect(result2[2]).tobe("best");
+    expect(result2[3]).tobe("programming");
+    expect(result2[4]).tobe("language");
 })
 
 
